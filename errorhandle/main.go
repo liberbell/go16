@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 )
@@ -15,4 +16,5 @@ func main() {
 		log.Println(err)
 		return
 	}
+	fmt.Println("file successfully opened.", f.Name())
 }

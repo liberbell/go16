@@ -11,7 +11,7 @@ func volume(r float64) (float64, error) {
 
 		return 0, errors.New("Volume calculation failed: radius negative.")
 	}
-	return (4.0 / 3.0) * 3.14 * r * r * r
+	return (4.0 / 3.0) * 3.14 * r * r * r, nil
 }
 
 func main() {

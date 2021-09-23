@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
 )
 
@@ -23,5 +24,10 @@ func main() {
 	// fmt.Println(f)
 
 	//Open and Cloes file
-
+	f, err := os.Open("create.txt")
+	defer closer(f)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("file successfully opened.", f.Name())
 }

@@ -9,6 +9,7 @@ import (
 func closer(f *os.File) error {
 	f.Close()
 	fmt.Println(f.Name(), " successfully closed.")
+	return nil
 }
 
 func main() {

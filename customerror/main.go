@@ -21,8 +21,8 @@ func main() {
 	vol, err := volume(radius)
 	if err != nil {
 		log.Println(err)
-		break
+	} else {
+		fmt.Printf("volume of shpere is %0.2f\n", vol)
 	}
-	fmt.Printf("volume of shpere is %0.2f\n", vol)
 
 }

@@ -1,9 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
-func volume(r float64) float64 {
+func volume(r float64) (float64, error) {
 
+	if r < 0 {
+
+		return 0, errors.New("Volume calculation failed: radius negative.")
+	}
 	return (4.0 / 3.0) * 3.14 * r * r * r
 }
 

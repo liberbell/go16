@@ -11,6 +11,6 @@ func main() {
 
 	radius := 1.0
 	vol := volume(radius)
-	fmt.Printf("volume of shpere is %0.2f", vol)
+	fmt.Printf("volume of shpere is %0.2f\n", vol)
 
 }

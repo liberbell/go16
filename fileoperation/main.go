@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	f, err := os.Open("create.txt")
+	//Create File
+	f, err := os.Create("create.txt")
 	defer f.Close()
 
 	if err != nil {

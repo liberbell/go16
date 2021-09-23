@@ -17,7 +17,7 @@ func volume(r float64) (float64, error) {
 
 func main() {
 
-	radius := -1.0
+	radius := 1.0
 	vol, err := volume(radius)
 	if err != nil {
 		log.Println(err)

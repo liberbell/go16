@@ -5,9 +5,9 @@ import "fmt"
 func p(s string, i int) {
 	x := [3]int{1, 2, 3}
 	x[i] = 11
-	if i > 2 {
-		panic(s)
-	}
+	// if i > 2 {
+	// 	panic(s)
+	// }
 }
 
 func r() {

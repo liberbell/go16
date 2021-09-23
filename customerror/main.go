@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	"log"
 )
 
 func volume(r float64) (float64, error) {
@@ -17,7 +18,10 @@ func volume(r float64) (float64, error) {
 func main() {
 
 	radius := 1.0
-	vol := volume(radius)
+	vol, err := volume(radius)
+	if err != nil {
+		log.Println(err)
+	}
 	fmt.Printf("volume of shpere is %0.2f\n", vol)
 
 }

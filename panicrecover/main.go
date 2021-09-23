@@ -11,8 +11,11 @@ func p(s string, i int) {
 func r() {
 	if err := recover(); err != nil {
 		fmt.Println(err)
+		fmt.Println("Recovered from panic.")
 	}
 }
+
 func main() {
-	a
+	defer r()
+	p("runtime error: enter panic state.", 3)
 }

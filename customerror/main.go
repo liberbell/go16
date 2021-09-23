@@ -17,10 +17,11 @@ func volume(r float64) (float64, error) {
 
 func main() {
 
-	radius := 1.0
+	radius := -1.0
 	vol, err := volume(radius)
 	if err != nil {
 		log.Println(err)
+		break
 	}
 	fmt.Printf("volume of shpere is %0.2f\n", vol)
 

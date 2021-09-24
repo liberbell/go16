@@ -1,5 +1,10 @@
 package main
 
+import (
+	"log"
+	"os"
+)
+
 //Open and Close file
 // func closer(f *os.File) error {
 // 	f.Close()
@@ -53,6 +58,11 @@ func main() {
 	// fmt.Println(reflect.TypeOf(w))
 	// fmt.Println(w)
 
-	//Rename file
-
+	//Rename move file
+	oldPath := "file.txt"
+	newPath := "./new/new.txt"
+	err := os.Rename(oldPath, newPath)
+	if err != nil {
+		log.Fatal(err)
+	}
 }

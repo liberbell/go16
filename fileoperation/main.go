@@ -1,13 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"io"
-	"log"
-	"os"
-	"reflect"
-)
-
 //Open and Close file
 // func closer(f *os.File) error {
 // 	f.Close()
@@ -41,23 +33,26 @@ func main() {
 	// fmt.Println("file successfully removed.")
 
 	//Copy file
-	src, err := os.Open("src.txt")
-	defer src.Close()
+	// src, err := os.Open("src.txt")
+	// defer src.Close()
 
-	if err != nil {
-		log.Fatal(err)
-	}
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
 
-	dst, err := os.OpenFile("dst.txt", os.O_RDWR|os.O_CREATE, 0755)
-	defer dst.Close()
-	if err != nil {
-		log.Fatal(err)
-	}
+	// dst, err := os.OpenFile("dst.txt", os.O_RDWR|os.O_CREATE, 0755)
+	// defer dst.Close()
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
 
-	w, err := io.Copy(dst, src)
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println(reflect.TypeOf(w))
-	fmt.Println(w)
+	// w, err := io.Copy(dst, src)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// fmt.Println(reflect.TypeOf(w))
+	// fmt.Println(w)
+
+	//Rename file
+
 }

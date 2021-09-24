@@ -1,9 +1,11 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"os"
+	"reflect"
 )
 
 //Open and Close file
@@ -56,4 +58,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	fmt.Println(reflect.TypeOf(w))
+	fmt.Println(w)
 }

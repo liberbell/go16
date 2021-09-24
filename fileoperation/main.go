@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 )
@@ -32,9 +31,17 @@ func main() {
 	// fmt.Println("file successfully opened.", f.Name())
 
 	//Remove delete file
-	err := os.Remove("del.txt")
+	// err := os.Remove("del.txt")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// fmt.Println("file successfully removed.")
+
+	//Copy file
+	src, err := os.Open("src.txt")
+	defer src.Close()
+
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("file successfully removed.")
 }

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"io"
 	"log"
 	"os"
 )
@@ -46,4 +47,13 @@ func main() {
 	}
 
 	dst, err := os.OpenFile("dst.txt", os.O_RDWR|os.O_CREATE, 0755)
+	defer dst.Close()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	w, err := io.Copy(dst, src)
+	if err != nil {
+		log.Fatal(err)
+	}
 }

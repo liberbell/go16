@@ -44,4 +44,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	dst, err := os.OpenFile("dst.txt", os.O_RDWR|os.O_CREATE, 0755)
 }

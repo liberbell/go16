@@ -59,9 +59,15 @@ func main() {
 	// fmt.Println(w)
 
 	//Rename move file
-	oldPath := "file.txt"
-	newPath := "./new/new.txt"
-	err := os.Rename(oldPath, newPath)
+	// oldPath := "file.txt"
+	// newPath := "./new/new.txt"
+	// err := os.Rename(oldPath, newPath)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+
+	//Truncate a file
+	err := os.Truncate("myFile.txt", 10)
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"reflect"
 )
 
 func main() {
@@ -12,6 +13,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	fmt.Println(reflect.TypeOf(contents))
+	fmt.Println(contents)
 	fmt.Println(string(contents))
 
 }

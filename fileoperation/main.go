@@ -79,4 +79,6 @@ func main() {
 	}
 
 	log.Println("file name: ", f.Name())
+	log.Println("file size: ", f.Size())
+	log.Println("file permission: ", f.Mode())
 }

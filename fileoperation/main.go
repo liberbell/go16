@@ -67,8 +67,16 @@ func main() {
 	// }
 
 	//Truncate a file
-	err := os.Truncate("myFile.txt", 10)
+	// err := os.Truncate("myFile.txt", 10)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+
+	//Fileinfo
+	f, err := os.Stat("myFile.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	log.Println("file name: ", f.Name())
 }

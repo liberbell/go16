@@ -40,3 +40,4 @@ func main() {
 	for _, f := range ls {
 		fmt.Println(f.Name(), f.IsDir())
 	}
+}

@@ -18,4 +18,8 @@ func main() {
 	for s.Scan() {
 		fmt.Println(s.Text())
 	}
+
+	if err := s.Err(); err != nil {
+		log.Fatal(err)
+	}
 }

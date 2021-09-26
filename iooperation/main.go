@@ -1,10 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
-	"path/filepath"
 )
 
 func main() {
@@ -26,10 +24,16 @@ func main() {
 	// }
 
 	//Make directory all
-	p := filepath.Join("../test", "subdir1", "subdir2")
-	err := os.MkdirAll(p, 0777)
+	// p := filepath.Join("../test", "subdir1", "subdir2")
+	// err := os.MkdirAll(p, 0777)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// fmt.Println(p, "nested directory created")
+
+	//Readdir list file
+	ls, err := os.ReadDir("../demo")
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(p, "nested directory created")
 }

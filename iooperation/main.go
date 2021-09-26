@@ -38,5 +38,5 @@ func main() {
 		log.Fatal(err)
 	}
 	for _, f := range ls {
-		fmt.Println()
+		fmt.Println(f.Name(), f.IsDir())
 	}

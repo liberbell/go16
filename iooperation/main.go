@@ -19,5 +19,9 @@ func main() {
 	}
 	if errors.Is(err, os.ErrNotExist) {
 		err := os.MkdirAll("subdir", 0777)
+		if err := nil {
+			log.Fatal(err)
+		}
+		fmt.Println("subdir directory created.")
 	}
 }

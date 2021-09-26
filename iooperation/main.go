@@ -33,7 +33,7 @@ func main() {
 	// fmt.Println(p, "nested directory created")
 
 	//Readdir list file
-	ls, err := os.ReadDir("../demo")
+	ls, err := os.ReadDir("../iooperation")
 	if err != nil {
 		log.Fatal(err)
 	}

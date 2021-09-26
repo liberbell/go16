@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"os"
 )
@@ -14,4 +15,7 @@ func main() {
 	}
 
 	s := bufio.NewScanner(f)
+	for s.Scan() {
+		fmt.Println(s.Text())
+	}
 }
